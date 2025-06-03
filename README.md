@@ -1,6 +1,6 @@
 # MetroData
 
-Colaboradores:
+<b> Colaboradores: </b> <br>
 Henrique Dourado Domingos - henriquedouradoo <br>
 Edson Feliz - <br>
 João Vitor - <br>
