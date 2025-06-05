@@ -304,3 +304,36 @@ SELECT COUNT(DISTINCT fkConjuge1) AS totalUsuariosRelacionados
 FROM relacionamento;
 
 
+-- selects faceis
+
+
+-- 1 - Listar todas as estações
+SELECT * FROM estacao;
+ -- 2 - Listar todos os usuários
+ SELECT * FROM usuario;
+-- 3 - Listar todos os bilhetes com valor e forma de pagamento
+SELECT tipo, valor, formaPagamento FROM bilhete;
+-- 4 - Mostrar o nome das estações e a média de atrasos
+SELECT nome, mediaAtrasosMin FROM estacao;
+-- 5 - Exibir o nome e tipo de usuário de todos os usuários
+SELECT nome, tipoUsuario FROM usuario;
+-- 6 - Listar estações com mais de 120.000 passageiros
+SELECT nome, passageiros FROM estacao WHERE passageiros > 120000;
+-- 7 - Listar usuários do tipo 'Estudante'
+SELECT nome, idade FROM usuario WHERE tipoUsuario = 'Estudante';
+-- 8 - Listar estações onde os elevadores não estão funcionando
+SELECT nome FROM estacao WHERE elevadoresFuncionando = 'não';
+-- 9 - Mostrar usuários com idade acima de 60
+SELECT nome,idade FROM usuario WHERE idade > 60;
+-- 10 - Mostrar os nomes das estações que têm elevadores funcionando
+SELECT nome FROM estacao WHERE elevadoresFuncionando = 'sim';
+-- 11 - Listar estações ordenadas pela média de atrasos (decrescente)
+SELECT nome, mediaAtrasosMin FROM estacao ORDER BY mediaAtrasosMin DESC;
+-- 12 - Listar usuários ordenados por idade (crescente)
+SELECT nome, idade FROM usuario ORDER BY idade ASC;
+-- 13 - Mostrar os nomes e idades dos usuários do tipo 'Trabalhador'
+SELECT nome, idade FROM usuario WHERE tipoUsuario = 'Trabalhador';
+-- 14 - Exibir o nome da estação e sua zona onde há bilheteria
+SELECT nome, zona FROM estacao WHERE possuiBilheteria = 'sim';
+-- 15 - Listar os tipos de ocorrência e a data em que aconteceram
+SELECT tipo, dtOcorrencia FROM ocorrencia;
